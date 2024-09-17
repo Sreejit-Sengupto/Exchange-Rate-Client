@@ -12,7 +12,7 @@ export const RateProvider = ({ children }) => {
   const getPrices = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/v1/market/exchange-data"
+        "https://exchange-rate-server.onrender.com/api/v1/market/exchange-data"
       );
       setRates(response.data.data.exchangeData);
     } catch (error) {
